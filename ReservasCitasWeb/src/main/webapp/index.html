@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ReservasCitas">
     <head>
         <title>Sisinfo - Uniandes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="./js/jquery-2.2.1.min.js"></script>
         <script src="./js/angular/angular.min.js"></script>
         <script src="./js/angular/angular-route.min.js"></script>
+        <script src="./js/calendar/calendar.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./css/calendar/calendar.min.css" />
     </head>
     <body>
-        <div ng-include="'./templates/header.html'"></div>
-        <div ng-view=""></div>
-        <div ng-include="'./templates/footer.hmtl'"></div>
+        <header ng-include="'./templates/header.html'"></header>
+        <div ng-view></div>
+        <footer ng-include="'./templates/footer.hmtl'"></footer>
         <script src="./js/main.js"></script>
+        <script src="./js/routeAngular.js"></script>
         <script src="./js/controllers/blackListController.js"></script>
-        <script src="./js/controllers/cancelReserveController.js"></script>
         <script src="./js/controllers/createUpdateController.js"></script>
         <script src="./js/controllers/editScheduleController.js"></script>
         <script src="./js/controllers/pReserveController.js"></script>

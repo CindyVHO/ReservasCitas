@@ -1,2 +1,2 @@
 /*JS Principal para inicializar angular*/
-app=Angular.modules('ReservasCitas', ['ngRoute']);
+app=angular.module('ReservasCitas', ['ngRoute']);

@@ -18,23 +18,10 @@ app.config(function($routeProvider){
            }).when('/cancelReserves',{
                templateUrl:'./templates/cancelReserve.html',
                controller:'cancelReserveController'
+           }).when('/addBlackList',{
+               templateUrl:'./templates/addBlackList.html',
+               controller:'blackListController'
            }).otherwise({
-              redirectTo:'/coorReserve' 
+              redirectTo:'/coordReserve' 
            });
-});
-
-
-app.config(function($routeProvider){
-    $routeProvider.
-            when('/efra',{
-              templateUrl:'./templates/contentEfra.html',
-              controller:'efraController'
-            }).
-            when('/cindy',{
-                templateUrl:'./templates/contentCindy.html',
-                controller:'cindyController'    
-            }).
-            otherwise({
-                redirectTo:'/efra'
-    });
 });
