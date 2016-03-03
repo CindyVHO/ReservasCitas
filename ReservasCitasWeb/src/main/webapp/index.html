@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Sisinfo - Uniandes</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="./js/angular/angular.min.js"></script>
+        <script src="./js/angular/angular-route.min.js"></script>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div ng-include="'./templates/header.html'"></div>
+        <div ng-view=""></div>
+        <div ng-include="'./templates/footer.hmtl'"></div>
+        <script src="./js/main.js"></script>
+        <script src="./js/controllers/blackListController.js"></script>
+        <script src="./js/controllers/cancelReserveController.js"></script>
+        <script src="./js/controllers/createUpdateController.js"></script>
+        <script src="./js/controllers/editScheduleController.js"></script>
+        <script src="./js/controllers/pReserveController.js"></script>
+        <script src="./js/controllers/searchMakeController.js"></script>
     </body>
 </html>
