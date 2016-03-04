@@ -1,39 +1,27 @@
-<div>
+<div class="menu_lateral">
+    <div class="menu-lateral-content">
+        <div class="user">
+            <!-- Circulo o recuadro con el nombre del usuario, retornar a la pantalla principal-->
+            Usuario
+        </div>
+        <ul class="men">
+            <li><a class="list" href="#/editSchedule">Editar Horario Coordinaci&oacute;n</a></li>
+            <li><a class="list" href="#/createUpdateReserve">Crear y/o Editar Reservas</a></li>
+            <li><a class="list" href="#/searchMakeReserve">Consultar y Marcar Reservas </a></li>
+            <li><a class="list" href="#/blackList">Lista Negra</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="contentCreate">
     <div>
         <h4>El horario de atenci&oacute;n de coordinaci&oacute;n es: </h4>
         <h4>CARGAR HORARIO DE COORDINACION DESDE BD</h4>
     </div>
+    <div id="weekly-schedule">
+
+    </div>
 </div>
 
-<div class="calendar" data-color="normal">
-    <div data-role="day" data-day="2013910">
-        <div data-role="event" data-name="This is an event" data-start="9.00" data-end="9.30" data-location="The Web"></div>
-        <div data-role="event" data-name="This is also an event" data-start="10.00" data-end="11.00" data-location="At Home"></div>
-    </div>
-    <script>
-        var yy;
-        var calendarArray = [];
-        var monthOffset = [6, 7, 8, 9, 10, 11, 0, 1, 2, 3, 4, 5];
-        var monthArray = [["ENE", "enero"], ["FEB", "Febrero"], ["MAR", "Marzo"], ["ABR", "Abril"], ["MAY", "Mayo"], ["JUN", "Junio"], ["JUL", "Julio"], ["AGO", "Agosto"], ["SEP", "Septiembre"], ["OCT", "Octubre"], ["NOV", "Noviembre"], ["DIC", "Diciembre"]];
-        var letrasArray = ["L", "M", "X", "J", "V", "S", "D"];
-        var dayArray = ["7", "1", "2", "3", "4", "5", "6"];
-        $(document).ready(function () {
-            $(document).on('click', '.calendar-day.have-events', activateDay);
-            $(document).on('click', '.specific-day', activatecalendar);
-            $(document).on('click', '.calendar-month-view-arrow', offsetcalendar);
-            $(window).resize(calendarScale);
-            $(".calendar").calendar({
-                "2013910": {
-                    "Mulberry Festival": {
-                        start: "9.00",
-                        end: "9.30",
-                        location: "London"
-                    }
-                }
-            });
-            calendarSet();
-            calendarScale();
-        });
-    </script>
-</div>
+<div ng-include="'./templates/createEditReserve.html'"></div>
 

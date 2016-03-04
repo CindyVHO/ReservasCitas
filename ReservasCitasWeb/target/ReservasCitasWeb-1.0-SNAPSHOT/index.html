@@ -6,14 +6,19 @@
         <script src="./js/jquery-2.2.1.min.js"></script>
         <script src="./js/angular/angular.min.js"></script>
         <script src="./js/angular/angular-route.min.js"></script>
-        <script src="./js/calendar/calendar.min.js"></script>
+        <script src="./js/vendor/calendar.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/foundation.min.css"/>
         <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./css/font-awesome.css" />
         <link rel="stylesheet" href="./css/calendar/calendar.min.css" />
+        <link rel="stylesheet" href="./css/staticFiles.css" />
+        <link rel="stylesheet" href="./css/main.css"/>
     </head>
     <body>
         <header ng-include="'./templates/header.html'"></header>
         <div ng-view></div>
-        <footer ng-include="'./templates/footer.hmtl'"></footer>
+        <footer ng-include="'./templates/footer.html'"></footer>
         <script src="./js/main.js"></script>
         <script src="./js/routeAngular.js"></script>
         <script src="./js/controllers/blackListController.js"></script>

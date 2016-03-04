@@ -18,9 +18,6 @@ app.config(function($routeProvider){
            }).when('/cancelReserves',{
                templateUrl:'./templates/cancelReserve.html',
                controller:'cancelReserveController'
-           }).when('/addBlackList',{
-               templateUrl:'./templates/addBlackList.html',
-               controller:'blackListController'
            }).otherwise({
               redirectTo:'/coordReserve' 
            });
