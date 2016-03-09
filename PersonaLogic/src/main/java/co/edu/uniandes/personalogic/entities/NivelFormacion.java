@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.reservacitaslogic.entities;
+package co.edu.uniandes.personalogic.entities;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,34 +14,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Tabla que contiene los motivos por los que se puede reservar una cita
+ * Clase que contiene el nivel de formacion de un estudiante
  * @author Cindy
  */
 @Entity
-@Table(name = "motivo")
-public class Reason implements Serializable {
-
+@Table (name = "nivel_formacion")
+public class NivelFormacion implements Serializable{
+    
     private static final long serialVersionUID = 1L;
     
     @Id
+    @Column(name = "id_nivel_formacion")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    /* Columna que hace referencia al nombre del motivo */
-    @Column(name = "nombre_motivo")
+    /* Columna que hace referencia al nombre del tipo de cuenta*/
+    @Column(name = "nombre_nivel_formacion")
     private String nombre;
-    
-    /*Columna que hace referencia a la fecha y hora de inicio de atencion del motivo*/
-    @Column (name = "fecha_hora_inicio")
-    private Timestamp fechaHoraInicio;
-    
-    /*Columna que hace referencia a la fecha y hora final de atencion del motivo*/
-    @Column (name = "fecha_hora_fin")
-    private Timestamp fechaHoraFin;
-    
-    /*Constructor de la clase*/
-    public Reason() {    }
-           
+
+    /* Constructor de la clase */
+    public NivelFormacion() {     }
+
     /** Metodos Get y Set de los atributos de la clase */
     public Long getId() {
         return id;
@@ -59,25 +51,8 @@ public class Reason implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public Timestamp getFechaHoraInicio() {
-        return fechaHoraInicio;
-    }
-
-    public void setFechaHoraInicio(Timestamp fechaHoraInicio) {
-        this.fechaHoraInicio = fechaHoraInicio;
-    }
-
-    public Timestamp getFechaHoraFin() {
-        return fechaHoraFin;
-    }
-
-    public void setFechaHoraFin(Timestamp fechaHoraFin) {
-        this.fechaHoraFin = fechaHoraFin;
-    }
     
     /*Metodos Extra*/
-
     @Override
     public int hashCode() {
         int hash = 0;
@@ -88,10 +63,10 @@ public class Reason implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Reason)) {
+        if (!(object instanceof NivelFormacion)) {
             return false;
         }
-        Reason other = (Reason) object;
+        NivelFormacion other = (NivelFormacion) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -100,7 +75,7 @@ public class Reason implements Serializable {
 
     @Override
     public String toString() {
-        return "co.edu.uniandes.reservacitaslogic.entities.Reason[ id=" + id + " ]";
+        return "co.edu.uniandes.personalogic.entities.NivelFormacion[ id=" + id + " ]";
     }
     
 }

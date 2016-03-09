@@ -3,6 +3,8 @@
   <persistence-unit name="com.mycompany_ReservaCitasLogic_jar_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>co.edu.uniandes.reservacitaslogic.entities.CoordinationDate</class>
+    <class>co.edu.uniandes.personalogic.entities.Student</class>
+    <class>co.edu.uniandes.personalogic.entities.Person</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/reservas_citas?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.password" value="mysql"/>
