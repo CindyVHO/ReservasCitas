@@ -7,11 +7,13 @@ package co.edu.uniandes.reservacitaslogic.entities;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -47,8 +49,7 @@ public class CoordinationDate implements Serializable {
     
     /** Columna que hace referencia al motivo de la cita */
     @OneToOne
-    @Column(name = "motivo")
-    private ContactImportant motivo;
+    private Contact motivo;
     
     /** Columna que hace referencia al programa al que pertenece el estudiante */
     @Column(name = "programa")

@@ -5,22 +5,15 @@
  */
 package co.edu.uniandes.reservacitaslogic.dtos;
 
-import co.edu.uniandes.reservacitaslogic.entities.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
 import java.util.Date;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * DTO de la entidad Cita con Coordinacion
  * @author Cindy
  */
+@XmlRootElement
 public class CoordinationDateDTO implements Serializable {
 
     /*Id cita con coordinacion*/

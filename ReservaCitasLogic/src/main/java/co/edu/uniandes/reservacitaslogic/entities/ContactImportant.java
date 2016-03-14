@@ -6,11 +6,13 @@
 package co.edu.uniandes.reservacitaslogic.entities;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -30,7 +32,6 @@ public class ContactImportant implements Serializable {
 
     /*Contacto al cual se le quiere almacenar su datos*/
     @OneToOne
-    @Column (name = "contacto")
     private Contact contacto;
     
     /*Columna que almacena el nombre de la empresa*/

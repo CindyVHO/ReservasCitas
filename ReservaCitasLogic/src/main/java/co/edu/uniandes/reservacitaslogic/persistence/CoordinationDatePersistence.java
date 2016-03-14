@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 @Stateless
 public class CoordinationDatePersistence extends GeneralPersistence<CoordinationDate>{
     
-    public CoordinationDatePersistence(EntityManager em) {
+    public CoordinationDatePersistence() {
         this.entityClass = CoordinationDate.class;
     }
     

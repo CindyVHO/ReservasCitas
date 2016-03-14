@@ -25,8 +25,6 @@ public abstract class ReasonConverter {
             ReasonDTO dto = new ReasonDTO();            
             dto.setId(entity.getId());
             dto.setNombre(entity.getNombre());
-            dto.setFechaHoraInicio(entity.getFechaHoraInicio());
-            dto.setFechaHoraFin(entity.getFechaHoraFin());
             return dto;
         } else {
             return null;
@@ -47,8 +45,6 @@ public abstract class ReasonConverter {
         if (entity != null) {
             ReasonDTO dto = new ReasonDTO();
             dto.setNombre(entity.getNombre());
-            dto.setFechaHoraInicio(entity.getFechaHoraInicio());
-            dto.setFechaHoraFin(entity.getFechaHoraFin());
             return dto;
         } else {
             return null;
@@ -60,8 +56,6 @@ public abstract class ReasonConverter {
             Reason entity = new Reason();
             entity.setId(dto.getId());
             entity.setNombre(dto.getNombre()); 
-            entity.setFechaHoraInicio((Timestamp) dto.getFechaHoraInicio());
-            entity.setFechaHoraFin((Timestamp) dto.getFechaHoraFin());
             return entity;
         } else {
             return null;

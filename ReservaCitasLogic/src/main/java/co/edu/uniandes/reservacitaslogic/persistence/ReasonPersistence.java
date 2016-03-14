@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 @Stateless
 public class ReasonPersistence extends GeneralPersistence<Reason>{
     
-    public ReasonPersistence(EntityManager em) {
+    public ReasonPersistence() {
         this.entityClass = Reason.class;
     }
     

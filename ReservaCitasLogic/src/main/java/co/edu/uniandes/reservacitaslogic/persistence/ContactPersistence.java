@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 @Stateless
 public class ContactPersistence extends GeneralPersistence<Contact>{
     
-    public ContactPersistence(EntityManager em) {
+    public ContactPersistence() {
         this.entityClass = Contact.class;
     }
     

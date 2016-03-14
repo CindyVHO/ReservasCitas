@@ -8,8 +8,6 @@ package co.edu.uniandes.entitymanager;
 import java.util.List;
 import java.util.Map;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
@@ -20,7 +18,7 @@ import javax.persistence.Query;
  */
 public abstract class GeneralPersistence <T> {
 
-    @PersistenceContext(unitName = "ReservasCitasPU")
+    @PersistenceContext(unitName = "ReservaCitasPU")
     protected EntityManager entityManager;
     
     protected Class<T> entityClass;

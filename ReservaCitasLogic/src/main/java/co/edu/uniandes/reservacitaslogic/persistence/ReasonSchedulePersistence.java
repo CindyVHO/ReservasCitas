@@ -6,18 +6,19 @@
 package co.edu.uniandes.reservacitaslogic.persistence;
 
 import co.edu.uniandes.entitymanager.GeneralPersistence;
-import co.edu.uniandes.reservacitaslogic.entities.ContactImportant;
+import co.edu.uniandes.reservacitaslogic.entities.ReasonSchedule;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
 
 /**
  * Persistence para manejar la entidad de Motivo
  * @author Cindy
  */
 @Stateless
-public class ContactImportantPersistence extends GeneralPersistence<ContactImportant>{
+public class ReasonSchedulePersistence extends GeneralPersistence<ReasonSchedule>{
     
-    public ContactImportantPersistence() {
-        this.entityClass = ContactImportant.class;
+    public ReasonSchedulePersistence() {
+        this.entityClass = ReasonSchedule.class;
     }
     
 }

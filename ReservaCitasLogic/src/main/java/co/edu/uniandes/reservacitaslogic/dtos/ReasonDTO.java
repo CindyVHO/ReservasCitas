@@ -7,11 +7,13 @@ package co.edu.uniandes.reservacitaslogic.dtos;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * DTO de la entidad Motivo
  * @author Cindy
  */
+@XmlRootElement
 public class ReasonDTO implements Serializable {
 
     /*Id del motivo*/
@@ -19,12 +21,6 @@ public class ReasonDTO implements Serializable {
     
     /* Nombre del motivo */
     private String nombre;
-    
-    /*Fecha y hora de inicio de atencion del motivo*/
-    private Date fechaHoraInicio;
-    
-    /*Fecha y hora final de atencion del motivo*/
-    private Date fechaHoraFin;
            
     /*Metodos GET y SET de los atributos del DTO*/
     
@@ -42,22 +38,5 @@ public class ReasonDTO implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Date getFechaHoraInicio() {
-        return fechaHoraInicio;
-    }
-
-    public void setFechaHoraInicio(Date fechaHoraInicio) {
-        this.fechaHoraInicio = fechaHoraInicio;
-    }
-
-    public Date getFechaHoraFin() {
-        return fechaHoraFin;
-    }
-
-    public void setFechaHoraFin(Date fechaHoraFin) {
-        this.fechaHoraFin = fechaHoraFin;
-    }
-        
+    }        
 }
