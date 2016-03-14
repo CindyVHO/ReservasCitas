@@ -15,12 +15,12 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
- * Se hará uso de esta tabla para almacenar contactos que van a citas con coordinacion
+ * Se harï¿½ uso de esta tabla para almacenar contactos que van a citas con coordinacion
  * y son importantes para la universidad.
  * @author Cindy
  */
 @Entity
-@Table (name = "datos_importante")
+@Table (name = "datos_contacto_importante")
 public class ContactImportant implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -52,6 +52,38 @@ public class ContactImportant implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Contact getContacto() {
+        return contacto;
+    }
+
+    public void setContacto(Contact contacto) {
+        this.contacto = contacto;
+    }
+
+    public String getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
+    }
+
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
     @Override

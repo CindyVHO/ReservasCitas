@@ -47,7 +47,7 @@ public class Student implements Serializable {
     
     @Column (name = "tipo_cuenta")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private TipoCuenta tipoCuenta;
+    private AccountType tipoCuenta;
     
     @Column (name = "id_persona")
     @OneToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
@@ -55,19 +55,19 @@ public class Student implements Serializable {
     
     @Column (name = "id_info_academica")
     @OneToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.ALL)
-    private InformacionAcademica informacion_Academica;
+    private AcademicData informacion_Academica;
     
     @Column (name = "id_programa")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Programa programa;
+    private Program programa;
     
     @Column (name = "id_doble_programa")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Programa doblePrograma;
+    private Program doblePrograma;
     
     @Column (name = "id_nivel_formacion")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private NivelFormacion tipoEstudiante;
+    private FormationLevel tipoEstudiante;
     
     @Column(name = "activo")
     private Boolean activo;

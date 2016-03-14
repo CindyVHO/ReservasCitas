@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-    <artifactId>ReservasCitas</artifactId>
-    <groupId>com.mycompany</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-
-    <groupId>com.mycompany</groupId>
+        <artifactId>ReservasCitas</artifactId>
+        <groupId>co.edu.uniandes</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    
+    <groupId>co.edu.uniandes</groupId>
     <artifactId>ReservasCitasWeb</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -20,6 +20,12 @@
     </properties>
     
     <dependencies>
+        <dependency>
+            <groupId>co.edu.uniandes</groupId>
+            <artifactId>ReservasCitas</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
+        </dependency>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>

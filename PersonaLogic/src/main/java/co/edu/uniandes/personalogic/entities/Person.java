@@ -41,7 +41,7 @@ public class Person implements Serializable {
     /*Columna que almacena el tipo de documento de la persona*/
     @Column(name = "id_tipo_documento")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private TipoDocumento tipoDocumento;
+    private DocumentType tipoDocumento;
     
     /*Columna que almacena el numero de documento de la persona*/
     @Column(name = "numero_documento")
@@ -78,7 +78,7 @@ public class Person implements Serializable {
     /*Columna que almacena el pais de la persona*/
     @Column(name = "id_pais")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Pais pais;
+    private Country pais;
 
     /*Columna que almacena la ciudad de nacimiento de la persona*/
     @Column(name = "ciudad_nacimiento")
@@ -122,11 +122,11 @@ public class Person implements Serializable {
         this.nombres = nombres;
     }
 
-    public TipoDocumento getTipoDocumento() {
+    public DocumentType getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+    public void setTipoDocumento(DocumentType tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 
@@ -194,11 +194,11 @@ public class Person implements Serializable {
         this.extension = extension;
     }
 
-    public Pais getPais() {
+    public Country getPais() {
         return pais;
     }
 
-    public void setPais(Pais pais) {
+    public void setPais(Country pais) {
         this.pais = pais;
     }
 

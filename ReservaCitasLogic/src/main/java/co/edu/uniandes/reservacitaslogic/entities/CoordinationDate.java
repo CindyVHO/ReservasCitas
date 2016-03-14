@@ -48,7 +48,7 @@ public class CoordinationDate implements Serializable {
     /** Columna que hace referencia al motivo de la cita */
     @OneToOne
     @Column(name = "motivo")
-    private Reason motivo;
+    private ContactImportant motivo;
     
     /** Columna que hace referencia al programa al que pertenece el estudiante */
     @Column(name = "programa")
