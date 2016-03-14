@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>ReservaCitasLogic</module>
-    <module>ReservasCitasWeb</module>
-  </modules>
+        <module>ReservasCitasWeb</module>
+    </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

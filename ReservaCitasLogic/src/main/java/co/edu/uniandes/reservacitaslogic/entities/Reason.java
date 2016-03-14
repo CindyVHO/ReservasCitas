@@ -32,14 +32,6 @@ public class Reason implements Serializable {
     @Column(name = "nombre_motivo")
     private String nombre;
     
-    /*Columna que hace referencia a la fecha y hora de inicio de atencion del motivo*/
-    @Column (name = "fecha_hora_inicio")
-    private Timestamp fechaHoraInicio;
-    
-    /*Columna que hace referencia a la fecha y hora final de atencion del motivo*/
-    @Column (name = "fecha_hora_fin")
-    private Timestamp fechaHoraFin;
-    
     /*Constructor de la clase*/
     public Reason() {    }
            
@@ -58,22 +50,6 @@ public class Reason implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public Timestamp getFechaHoraInicio() {
-        return fechaHoraInicio;
-    }
-
-    public void setFechaHoraInicio(Timestamp fechaHoraInicio) {
-        this.fechaHoraInicio = fechaHoraInicio;
-    }
-
-    public Timestamp getFechaHoraFin() {
-        return fechaHoraFin;
-    }
-
-    public void setFechaHoraFin(Timestamp fechaHoraFin) {
-        this.fechaHoraFin = fechaHoraFin;
     }
     
     /*Metodos Extra*/

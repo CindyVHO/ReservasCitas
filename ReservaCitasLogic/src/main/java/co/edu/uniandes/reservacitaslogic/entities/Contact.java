@@ -15,7 +15,7 @@ import javax.persistence.Table;
 
 /**
  * Tabla encargada de almacenar los datos de contacto para realizar la cita, 
- * se hara uso principalmente cuando se realiza atención a padres
+ * se hara uso principalmente cuando se realiza atencion a padres
  * @author Cindy
  */
 @Entity

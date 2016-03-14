@@ -1,0 +1,24 @@
+app.config(function($routeProvider){
+   $routeProvider.
+           when('/coordReserve',{
+               templateUrl:'./templates/principalReserves.html',
+               controller:'pReserveController'
+           }).when('/editSchedule',{
+               templateUrl:'./templates/editScheduleCoordination.html',
+               controller:'editScheduleController'
+           }).when('/createUpdateReserve',{
+               templateUrl:'./templates/createUpdateReserve.html',
+               controller:'createUpdateController'
+           }).when('/searchMakeReserve',{
+               templateUrl:'./templates/searchMakeReserve.html',
+               controller:'searchMakeController'
+           }).when('/blackList',{
+               templateUrl:'./templates/blackList.html',
+               controller:'blackListController'
+           }).when('/cancelReserves',{
+               templateUrl:'./templates/cancelReserve.html',
+               controller:'cancelReserveController'
+           }).otherwise({
+              redirectTo:'/coordReserve' 
+           });
+});

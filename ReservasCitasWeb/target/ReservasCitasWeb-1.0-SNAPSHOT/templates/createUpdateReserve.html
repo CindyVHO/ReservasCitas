@@ -1,0 +1,27 @@
+<div class="menu_lateral">
+    <div class="menu-lateral-content">
+        <div class="user">
+            <!-- Circulo o recuadro con el nombre del usuario, retornar a la pantalla principal-->
+            Usuario
+        </div>
+        <ul class="men">
+            <li><a class="list" href="#/editSchedule">Editar Horario Coordinaci&oacute;n</a></li>
+            <li><a class="list" href="#/createUpdateReserve">Crear y/o Editar Reservas</a></li>
+            <li><a class="list" href="#/searchMakeReserve">Consultar y Marcar Reservas </a></li>
+            <li><a class="list" href="#/blackList">Lista Negra</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="contentCreate">
+    <div>
+        <h4>El horario de atenci&oacute;n de coordinaci&oacute;n es: </h4>
+        <h4>CARGAR HORARIO DE COORDINACION DESDE BD</h4>
+    </div>
+    <div id="weekly-schedule">
+
+    </div>
+</div>
+
+<div ng-include="'./templates/createEditReserve.html'"></div>
+
