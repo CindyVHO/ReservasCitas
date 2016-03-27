@@ -41,19 +41,11 @@ header, footer {
     cursor: pointer;
     font-size: 16px;
     color: #9DA2B8;
-    padding-left: 15%;
-}
-
-.linkFooterContact{
-    cursor: pointer;
-    font-size: 16px;
-    color: #9DA2B8;
-    padding-left: 46%;
+    text-align: center;
 }
 
 footer{
     width: 100%;
-    position: fixed;
     bottom: 0;
 }
 
@@ -61,4 +53,53 @@ footer h4{
     text-align: center;
     color: white;
     font-size: 16px;
+}
+
+/** Barra Lateral CSS - Footer */
+.lateral-bar{
+    background-image: url('../images/space.jpeg');
+    line-height: 50px;
+    padding-left: 0;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+}
+
+.circleName {
+    width: 100px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.4);
+    text-align: center;
+    line-height: 94px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 32%;
+    margin-top: 3%;
+}
+
+.men{
+    list-style:none;
+    margin: 5em auto;
+}
+
+.men li{
+    box-shadow: 3px 0 rgba(255,255,255,0.2) inset;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    transition: all .5s;
+}
+
+.men li:hover{
+    box-shadow: 15em 0 rgba(255,255,255,0.2) inset;
+}
+
+.list{
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
 }
