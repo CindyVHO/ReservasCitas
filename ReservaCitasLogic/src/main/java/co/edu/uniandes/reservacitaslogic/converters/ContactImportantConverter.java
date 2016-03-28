@@ -5,6 +5,7 @@
  */
 package co.edu.uniandes.reservacitaslogic.converters;
 
+import co.edu.uniandes.personalogic.converters.CountryConverter;
 import co.edu.uniandes.reservacitaslogic.dtos.ContactImportantDTO;
 import co.edu.uniandes.reservacitaslogic.entities.ContactImportant;
 import java.sql.Timestamp;

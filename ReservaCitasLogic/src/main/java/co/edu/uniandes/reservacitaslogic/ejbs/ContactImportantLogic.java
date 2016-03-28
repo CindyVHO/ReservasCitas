@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package co.edu.uniandes.reservacitaslogic.ejbs;
-
 import co.edu.uniandes.reservacitaslogic.converters.ContactImportantConverter;
 import co.edu.uniandes.reservacitaslogic.dtos.ContactImportantDTO;
 import co.edu.uniandes.reservacitaslogic.entities.ContactImportant;

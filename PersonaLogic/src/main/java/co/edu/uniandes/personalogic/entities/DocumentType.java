@@ -6,6 +6,7 @@
 package co.edu.uniandes.personalogic.entities;
 
 import java.io.Serializable;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +23,12 @@ public class DocumentType implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    @Column(name = "nombre_tipo")
+    private String nameDocumentType;
+    
+    @Column(name = "sigla_tipo")
+    private String siglaDocumentType;
 
     public Long getId() {
         return id;
@@ -29,6 +36,22 @@ public class DocumentType implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNameDocumentType() {
+        return nameDocumentType;
+    }
+
+    public void setNameDocumentType(String nameDocumentType) {
+        this.nameDocumentType = nameDocumentType;
+    }
+
+    public String getSiglaDocumentType() {
+        return siglaDocumentType;
+    }
+
+    public void setSiglaDocumentType(String siglaDocumentType) {
+        this.siglaDocumentType = siglaDocumentType;
     }
 
     @Override

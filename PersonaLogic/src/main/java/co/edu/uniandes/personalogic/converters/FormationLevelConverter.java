@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.reservacitaslogic.converters;
+package co.edu.uniandes.personalogic.converters;
 
-import co.edu.uniandes.reservacitaslogic.dtos.ReasonDTO;
-import co.edu.uniandes.reservacitaslogic.entities.Reason;
+import co.edu.uniandes.personalogic.dtos.FormationLevelDTO;
+import co.edu.uniandes.personalogic.entities.FormationLevel;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,14 +14,14 @@ import java.util.List;
  *
  * @author Cindy
  */
-public abstract class ReasonConverter {
+public abstract class FormationLevelConverter {
 
-    private ReasonConverter() {
+    private FormationLevelConverter() {
     }
      
-    public static ReasonDTO refEntity2DTO(Reason entity) {
+    public static FormationLevelDTO refEntity2DTO(FormationLevel entity) {
         if (entity != null) {
-            ReasonDTO dto = new ReasonDTO();            
+            FormationLevelDTO dto = new FormationLevelDTO();            
             dto.setId(entity.getId());
             dto.setNombre(entity.getNombre());
             return dto;
@@ -30,9 +30,9 @@ public abstract class ReasonConverter {
         }
     }
 
-    public static Reason refDTO2Entity(ReasonDTO dto) {
+    public static FormationLevel refDTO2Entity(FormationLevelDTO dto) {
         if (dto != null) {
-            Reason entity = new Reason();
+            FormationLevel entity = new FormationLevel();
             entity.setId(dto.getId());
             return entity;
         } else {
@@ -40,9 +40,9 @@ public abstract class ReasonConverter {
         }
     }
 
-    private static ReasonDTO basicEntity2DTO(Reason entity) {
+    private static FormationLevelDTO basicEntity2DTO(FormationLevel entity) {
         if (entity != null) {
-            ReasonDTO dto = new ReasonDTO();
+            FormationLevelDTO dto = new FormationLevelDTO();
             dto.setNombre(entity.getNombre());
             return dto;
         } else {
@@ -50,9 +50,9 @@ public abstract class ReasonConverter {
         }
     }
 
-    public static Reason basicDTO2Entity(ReasonDTO dto) {
+    public static FormationLevel basicDTO2Entity(FormationLevelDTO dto) {
         if (dto != null) {
-            Reason entity = new Reason();
+            FormationLevel entity = new FormationLevel();
             entity.setId(dto.getId());
             entity.setNombre(dto.getNombre()); 
             return entity;
@@ -61,27 +61,27 @@ public abstract class ReasonConverter {
         }
     }
 
-    public static List<ReasonDTO> listEntity2DTO(List<Reason> entities) {
-        List<ReasonDTO> dtos = new ArrayList<ReasonDTO>();
+    public static List<FormationLevelDTO> listEntity2DTO(List<FormationLevel> entities) {
+        List<FormationLevelDTO> dtos = new ArrayList<FormationLevelDTO>();
         if (entities != null) {
-            for (Reason entity : entities) {
+            for (FormationLevel entity : entities) {
                 dtos.add(basicEntity2DTO(entity));
             }
         }
         return dtos;
     }
 
-    public static List<Reason> listDTO2Entity(List<ReasonDTO> dtos) {
-        List<Reason> entities = new ArrayList<Reason>();
+    public static List<FormationLevel> listDTO2Entity(List<FormationLevelDTO> dtos) {
+        List<FormationLevel> entities = new ArrayList<FormationLevel>();
         if (dtos != null) {
-            for (ReasonDTO dto : dtos) {
+            for (FormationLevelDTO dto : dtos) {
                 entities.add(basicDTO2Entity(dto));
             }
         }
         return entities;
     }  
     
-    public static ReasonDTO fullEntity2DTO(Reason entity) {
+    public static FormationLevelDTO fullEntity2DTO(FormationLevel entity) {
         if (entity != null) {
             return basicEntity2DTO(entity);
         } else {
@@ -89,7 +89,7 @@ public abstract class ReasonConverter {
         }
     }
 
-    public static Reason fullDTO2Entity(ReasonDTO dto) {
+    public static FormationLevel fullDTO2Entity(FormationLevelDTO dto) {
         if (dto != null) {
             return basicDTO2Entity(dto);
         } else {

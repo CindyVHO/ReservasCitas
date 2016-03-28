@@ -22,6 +22,8 @@ public class Country implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    private String nombrePais;
 
     public Long getId() {
         return id;
@@ -31,6 +33,14 @@ public class Country implements Serializable {
         this.id = id;
     }
 
+    public String getNombrePais() {
+        return nombrePais;
+    }
+
+    public void setNombrePais(String nombrePais) {
+        this.nombrePais = nombrePais;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;

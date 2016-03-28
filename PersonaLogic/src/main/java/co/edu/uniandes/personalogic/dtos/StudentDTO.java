@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.edu.uniandes.personalogic.entities;
+package co.edu.uniandes.personalogic.dtos;
 
+import co.edu.uniandes.personalogic.entities.*;
 import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,53 +20,22 @@ import javax.persistence.Table;
  * Tabla que contiene los datos extra de un estudiante
  * @author Cindy
  */
-@Entity
-@Table (name = "estudiante")
-public class Student implements Serializable {
+public class StudentDTO {
 
-    private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column (name = "id_estudiante")
     private Long id;
-    
-    @Column(name = "avisar_emergencia_apellidos")
     private String avisarEmergenciaApellidos;
-    
-    @Column(name = "avisar_emergencia_nombres")
     private String avisarEmergenciaNombres;
-    
-    @Column(name = "banco")
     private String banco;
-    
-    @Column(name = "cuenta_bancaria")
     private String cuentaBancaria;
-    
-    @Column(name = "telefono_emergencia")
     private String telefonoEmergencia;
-    
-    @Column (name = "id_persona")
-    @OneToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Person persona;
-    
-    @Column (name = "id_programa")
-    @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Program programa;
-    
-    @Column (name = "id_doble_programa")
-    @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private Program doblePrograma;
-    
-    @Column (name = "id_nivel_formacion")
-    @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
-    private FormationLevel tipoEstudiante;
-    
-    @Column(name = "activo")
+    private PersonDTO persona;
+    private ProgramDTO programa;
+    private ProgramDTO doblePrograma;
+    private FormationLevelDTO tipoEstudiante;
     private Boolean activo;
 
     /*Constructor de la clase*/
-    public Student() { }
+    public StudentDTO() { }
     
     /** Metodos Get y Set de los atributos de la clase */
     public Long getId() {
@@ -116,35 +86,35 @@ public class Student implements Serializable {
         this.telefonoEmergencia = telefonoEmergencia;
     }
 
-    public Person getPersona() {
+    public PersonDTO getPersona() {
         return persona;
     }
 
-    public void setPersona(Person persona) {
+    public void setPersona(PersonDTO persona) {
         this.persona = persona;
     }
 
-    public Program getPrograma() {
+    public ProgramDTO getPrograma() {
         return programa;
     }
 
-    public void setPrograma(Program programa) {
+    public void setPrograma(ProgramDTO programa) {
         this.programa = programa;
     }
 
-    public Program getDoblePrograma() {
+    public ProgramDTO getDoblePrograma() {
         return doblePrograma;
     }
 
-    public void setDoblePrograma(Program doblePrograma) {
+    public void setDoblePrograma(ProgramDTO doblePrograma) {
         this.doblePrograma = doblePrograma;
     }
 
-    public FormationLevel getTipoEstudiante() {
+    public FormationLevelDTO getTipoEstudiante() {
         return tipoEstudiante;
     }
 
-    public void setTipoEstudiante(FormationLevel tipoEstudiante) {
+    public void setTipoEstudiante(FormationLevelDTO tipoEstudiante) {
         this.tipoEstudiante = tipoEstudiante;
     }
 
@@ -154,35 +124,6 @@ public class Student implements Serializable {
 
     public void setActivo(Boolean activo) {
         this.activo = activo;
-    }
-    
-    
-
-    /*Metodos Extra*/
-    
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Student)) {
-            return false;
-        }
-        Student other = (Student) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "co.edu.uniandes.reservacitaslogic.entities.Student[ id=" + id + " ]";
     }
     
 }

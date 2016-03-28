@@ -92,6 +92,8 @@ public class Person implements Serializable {
     @Column(name = "activo")
     private boolean activo;
     
+    private String rol;
+    
     /* Constructor de la clase */
     public Person() {    }
 
@@ -224,6 +226,14 @@ public class Person implements Serializable {
 
     public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    public void setRol(String rol) {
+        this.rol = rol;
     }
 
     /* Metodos Extra */
