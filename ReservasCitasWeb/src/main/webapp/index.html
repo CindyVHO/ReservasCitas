@@ -24,8 +24,9 @@
     </head>
     <body>
         <header id="demo-header" ng-include="'./templates/header.html'"></header>
-        <div ng-view></div>
-        <footer ng-include="'./templates/footer.html'"></footer>
+        <aside class="lateral-bar" ng-include="'./templates/lateralBar.html'"></aside>
+        <div class="body-wrapper" ng-view></div>
+        
         <script src="./js/main.js"></script>
         <script src="./js/routeAngular.js"></script>
         <script src="./js/controllers/blackListController.js"></script>

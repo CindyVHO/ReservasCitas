@@ -17,7 +17,7 @@ body > div.ng-scope{
     padding-bottom: 100px;
 }
 
-header, footer {
+header, aside {
     font-family: Tahoma, Arial; 
     color: #e7e7e7;
     background: #001E3B;
@@ -42,17 +42,21 @@ header, footer {
     font-size: 16px;
     color: #9DA2B8;
     text-align: center; 
+    display: block;
 }
 
-footer{
-    width: 100%;
-    bottom: 0;
-}
-
-footer h4{
+aside h4{
     text-align: center;
     color: white;
     font-size: 16px;
+}
+
+.body-wrapper{
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+    height: 656px;
+    overflow: scroll;
 }
 
 /** Barra Lateral CSS - Footer */
@@ -60,9 +64,11 @@ footer h4{
     background-image: url('../images/space.jpeg');
     line-height: 50px;
     padding-left: 0;
-    width: 30%;
-    height: 100%;
+    width: 25%;
     display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    vertical-align: top;
 }
 
 .circleName {

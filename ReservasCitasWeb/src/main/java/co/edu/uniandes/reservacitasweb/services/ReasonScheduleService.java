@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.edu.uniandes.reservacitasweb.services;
 
-import co.edu.uniandes.reservacitaslogic.dtos.ContactDTO;
+import co.edu.uniandes.reservacitaslogic.dtos.ReasonScheduleDTO;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.Consumes;
@@ -14,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
-import co.edu.uniandes.reservascitaslogic.interfaces.IContactLogic;
+import co.edu.uniandes.reservascitaslogic.interfaces.IReasonScheduleLogic;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.ws.rs.DELETE;
@@ -26,14 +21,14 @@ import javax.ws.rs.PUT;
  *
  * @author Cindy
  */
-@Path("/contact")
+@Path("/reasonSchedule_schedule")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Stateless
-public class ContactService {
+public class ReasonScheduleService {
 
     @Inject 
-    private IContactLogic contactLogic;
+    private IReasonScheduleLogic reasonScheduleLogic;
     
     @Context 
     private HttpServletResponse response;
@@ -44,8 +39,8 @@ public class ContactService {
      * @return 
      */
     @POST
-    public ContactDTO createContact(ContactDTO dto) {
-        return contactLogic.addContact(dto);
+    public ReasonScheduleDTO createReasonSchedule(ReasonScheduleDTO dto) {
+        return reasonScheduleLogic.addReasonSchedule(dto);
     }
 
     /**
@@ -53,8 +48,8 @@ public class ContactService {
      * @return 
      */
     @GET
-    public List<ContactDTO> getContacts() {
-        return contactLogic.getContacts();
+    public List<ReasonScheduleDTO> getReasonSchedules() {
+        return reasonScheduleLogic.getReasonSchedules();
     }
 
     /**
@@ -64,8 +59,8 @@ public class ContactService {
      */
     @GET
     @Path("{id: \\d+}")
-    public ContactDTO getContact(@PathParam("id") Long id) {
-        return contactLogic.getContactById(id);
+    public ReasonScheduleDTO getReasonSchedule(@PathParam("id") Long id) {
+        return reasonScheduleLogic.getReasonScheduleById(id);
     }
 
     /**
@@ -76,9 +71,9 @@ public class ContactService {
      */
     @PUT
     @Path("{id: \\d+}")
-    public ContactDTO updateContact(@PathParam("id") Long id, ContactDTO dto) {
+    public ReasonScheduleDTO updateReasonSchedule(@PathParam("id") Long id, ReasonScheduleDTO dto) {
         dto.setId(id);
-        return contactLogic.updateContact(dto);
+        return reasonScheduleLogic.updateReasonSchedule(dto);
     }
 
     /**
@@ -87,7 +82,7 @@ public class ContactService {
      */
     @DELETE
     @Path("{id: \\d+}")
-    public void deleteContact(@PathParam("id") Long id) {
-        contactLogic.deleteContact(id);
+    public void deleteReasonSchedule(@PathParam("id") Long id) {
+        reasonScheduleLogic.deleteReasonSchedule(id);
     }
 }

@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import co.edu.uniandes.reservascitaslogic.interfaces.IContactImportantLogic;
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -28,6 +29,7 @@ import javax.ws.rs.PUT;
 @Path("/contactImportant")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Stateless
 public class ContactImportantService {
 
     @Inject 

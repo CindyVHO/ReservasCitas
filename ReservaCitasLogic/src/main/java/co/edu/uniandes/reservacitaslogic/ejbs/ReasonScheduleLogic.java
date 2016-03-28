@@ -12,6 +12,7 @@ import co.edu.uniandes.reservacitaslogic.persistence.ReasonSchedulePersistence;
 import co.edu.uniandes.reservascitaslogic.interfaces.IReasonScheduleLogic;
 import java.util.List;
 import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
 import javax.inject.Inject;
 
 /**
@@ -19,6 +20,7 @@ import javax.inject.Inject;
  * @author Cindy
  */
 @Stateless
+@Default
 public class ReasonScheduleLogic implements IReasonScheduleLogic{
 
     @Inject

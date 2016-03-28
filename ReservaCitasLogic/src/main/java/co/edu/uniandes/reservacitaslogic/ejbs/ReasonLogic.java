@@ -11,6 +11,7 @@ import co.edu.uniandes.reservacitaslogic.entities.Reason;
 import co.edu.uniandes.reservacitaslogic.persistence.ReasonPersistence;
 import co.edu.uniandes.reservascitaslogic.interfaces.IReasonLogic;
 import java.util.List;
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 

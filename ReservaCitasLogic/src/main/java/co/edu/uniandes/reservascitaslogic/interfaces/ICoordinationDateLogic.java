@@ -6,7 +6,6 @@
 package co.edu.uniandes.reservascitaslogic.interfaces;
 
 import co.edu.uniandes.reservacitaslogic.dtos.CoordinationDateDTO;
-import co.edu.uniandes.reservacitaslogic.entities.CoordinationDate;
 import java.util.List;
 
 /**

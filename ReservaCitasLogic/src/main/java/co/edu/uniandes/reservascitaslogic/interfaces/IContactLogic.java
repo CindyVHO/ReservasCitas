@@ -9,7 +9,7 @@ import co.edu.uniandes.reservacitaslogic.dtos.ContactDTO;
 import java.util.List;
 
 /**
- * Interfaz para el manejo de la entidad Motivo
+ * Interfaz para el manejo de la entidad Contacto
  * @author Cindy
  */
 public interface IContactLogic {
