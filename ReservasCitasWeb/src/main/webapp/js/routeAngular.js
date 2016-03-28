@@ -10,7 +10,7 @@ app.config(function($routeProvider){
                templateUrl:'./templates/createUpdateReserve.html',
                controller:'createUpdateController'
            }).when('/searchMakeReserve',{
-               templateUrl:'./templates/searchMakeReserve.html',
+               templateUrl:'./templates/searchMakeReservations.html',
                controller:'searchMakeController'
            }).when('/blackList',{
                templateUrl:'./templates/blackList.html',

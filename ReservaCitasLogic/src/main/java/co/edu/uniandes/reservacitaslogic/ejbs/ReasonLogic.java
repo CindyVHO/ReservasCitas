@@ -11,20 +11,20 @@ import co.edu.uniandes.reservacitaslogic.entities.Reason;
 import co.edu.uniandes.reservacitaslogic.persistence.ReasonPersistence;
 import co.edu.uniandes.reservascitaslogic.interfaces.IReasonLogic;
 import java.util.List;
-import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 /**
  * EJB usada para lo referente a Motivos
+ *
  * @author Cindy
  */
 @Stateless
-public class ReasonLogic implements IReasonLogic{
+public class ReasonLogic implements IReasonLogic {
 
     @Inject
     private ReasonPersistence persistence;
-    
+
     @Override
     public int countReasons() {
         return persistence.count();
@@ -38,6 +38,11 @@ public class ReasonLogic implements IReasonLogic{
     @Override
     public List<ReasonDTO> getReasons() {
         return ReasonConverter.listEntity2DTO(persistence.findAll());
+    }
+
+    @Override
+    public List<ReasonDTO> getReasonByName(String name) {
+        return ReasonConverter.listEntity2DTO(persistence.findByName(name));
     }
 
     @Override

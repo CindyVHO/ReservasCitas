@@ -1,34 +1,62 @@
 app.controller('createUpdateController', ['$scope', '$http', '$log', function ($scope, $http, $log) {
-        $('#weekly-schedule').dayScheduleSelector({
-            // Sun - Sat
-            days: [1, 2, 3, 4, 5],
-            // HH:mm format
-            startTime: '08:00',
-            // HH:mm format      
-            endTime: '18:00',
-            // minutes               
-            interval: 20,
-            stringDays: ['Lun', 'Mar', 'Mie', 'Jue', 'Vie']
+        $('#weekly-schedule').fullCalendar({
+            weekends: false,
+            dayClick: function (date, jsEvent, view) {
+                $scope.modal.fechaInicio = date.format().replace(/-/g, '/').split('T')[0];
+                $scope.$apply();
+                $('#modalCreateSchedule').fadeIn();
+            },
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'agendaWeek, agendaDay'
+            },
+            businessHours: {
+                start: '08:00',
+                end: '18:00'
+            },
+            defaultView: 'agendaWeek',
+            minTime: '08:00:00',
+            maxTime: '18:00:00'
         });
+
         setTimeout(function () {
-            $('#weekly-schedule td').each(function (index, value) {
-                $(value).on('click', function () {
-                    if ($(this).hasClass('first')) {
-                        return;
-                    } else {
-                        $(this).addClass('first');
-                        $('.modal').fadeIn();
-                    }
-                });
+            $('#startDate').datetimepicker({
+                format: 'DD/MM/YYYY'
             });
-        }, 500);
 
-        $("#weekly-schedule").on('selected.artsy.dayScheduleSelector', function (e, selected) {
-            console.log(selected);
-        })
-        $("#weekly-schedule").data('artsy.dayScheduleSelector').deserialize({});
+            $('#endDate').datetimepicker({
+                format: 'DD/MM/YYYY'
+            });
 
-        $scope.close = function(){
-             $('#modalCreateReserve').fadeOut();
+            $('#timeInit').datetimepicker({
+                format: 'LT'
+            });
+
+            $('#timeEnd').datetimepicker({
+                format: 'LT'
+            });
+
+            $('#startDate').on("dp.change", function (event) {
+                $scope.modal.fechaInicio = $('#startDate').data('date');
+            });
+
+            $("#endDate").on("dp.change", function (event) {
+                $scope.modal.fechaFin = $("#endDate").data('date');
+            });
+            
+            $('#timeInit').on("dp.change", function (event) {
+                $scope.modal.horaInicio = $('#timeInit').data('date');
+            });
+
+            $("#timeEnd").on("dp.change", function (event) {
+                $scope.modal.horaFin = $("#timeEnd").data('date');
+            });
+        }, 1000);
+
+
+
+        $scope.close = function () {
+            $('#modalCreateSchedule').fadeOut();
         };
     }]);

@@ -25,4 +25,6 @@ public interface IReasonLogic {
     public ReasonDTO updateReason(ReasonDTO Reason);
     
     public void deleteReason(Long id);
+    
+    public List<ReasonDTO> getReasonByName(String name); 
 }

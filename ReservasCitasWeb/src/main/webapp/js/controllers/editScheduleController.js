@@ -145,7 +145,7 @@ app.controller('editScheduleController', ['$scope', '$http', '$log', function ($
             $log.log($scope.modal.horaFin);
             $log.log($scope.modal.motivo);
             $log.log($('#select').data());
-            $log.log($('#select').data('name'));
+            $log.log($('#select').data('id'));
             $http({
                 method: 'POST',
                 url: './webresources/reason_schedule',

@@ -69,6 +69,17 @@ public class ReasonService {
     }
 
     /**
+     *
+     * @param name
+     * @return
+     */
+    @GET
+    @Path("{name}")
+    public List<ReasonDTO> getReasonByName(@PathParam("name") String name) {
+        return reasonLogic.getReasonByName(name);
+    }
+    
+    /**
      * Metodo PUT, encargado de actualizar informacion de la orden
      * @param id
      * @param dto

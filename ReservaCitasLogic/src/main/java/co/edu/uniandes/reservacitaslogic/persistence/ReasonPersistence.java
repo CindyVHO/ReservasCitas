@@ -20,5 +20,4 @@ public class ReasonPersistence extends GeneralPersistence<Reason>{
     public ReasonPersistence() {
         this.entityClass = Reason.class;
     }
-    
 }
