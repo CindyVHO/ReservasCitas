@@ -25,8 +25,10 @@ public abstract class ReasonScheduleConverter {
             ReasonScheduleDTO dto = new ReasonScheduleDTO();            
             dto.setId(entity.getId());
             dto.setReason(ReasonConverter.refEntity2DTO(entity.getReason()));
-            dto.setFechaHoraInicio(entity.getFechaHoraInicio());
-            dto.setFechaHoraFin(entity.getFechaHoraFin());
+            dto.setFechaInicio(entity.getFechaInicio());
+            dto.setFechaFin(entity.getFechaFin());
+            dto.setHoraInicio(entity.getHoraInicio());
+            dto.setHoraFin(entity.getHoraFin());
             return dto;
         } else {
             return null;
@@ -47,8 +49,10 @@ public abstract class ReasonScheduleConverter {
         if (entity != null) {
             ReasonScheduleDTO dto = new ReasonScheduleDTO();
             dto.setReason(ReasonConverter.refEntity2DTO(entity.getReason()));
-            dto.setFechaHoraInicio(entity.getFechaHoraInicio());
-            dto.setFechaHoraFin(entity.getFechaHoraFin());
+            dto.setFechaFin(entity.getFechaFin());
+            dto.setHoraInicio(entity.getHoraInicio());
+            dto.setHoraInicio(entity.getHoraInicio());
+            dto.setHoraFin(entity.getHoraFin());
             return dto;
         } else {
             return null;
@@ -60,8 +64,10 @@ public abstract class ReasonScheduleConverter {
             ReasonSchedule entity = new ReasonSchedule();
             entity.setId(dto.getId());
             entity.setReason(ReasonConverter.refDTO2Entity(dto.getReason()));
-            entity.setFechaHoraInicio((Timestamp) dto.getFechaHoraInicio());
-            entity.setFechaHoraFin((Timestamp) dto.getFechaHoraFin());
+            entity.setFechaInicio((Timestamp) dto.getFechaInicio());
+            entity.setFechaFin((Timestamp) dto.getFechaFin());
+            entity.setHoraInicio(dto.getHoraInicio());
+            entity.setHoraFin( dto.getHoraFin());
             return entity;
         } else {
             return null;

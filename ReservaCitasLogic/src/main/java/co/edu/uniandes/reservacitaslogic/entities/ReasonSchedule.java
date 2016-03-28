@@ -33,12 +33,20 @@ public class ReasonSchedule implements Serializable {
     private Reason reason;
     
     /*Columna que hace referencia a la fecha y hora de inicio de atencion del motivo*/
-    @Column (name = "fecha_hora_inicio")
-    private Timestamp fechaHoraInicio;
+    @Column (name = "fecha_inicio")
+    private Timestamp fechaInicio;
+    
+    /*Columna que hace referencia a la fecha y hora de inicio de atencion del motivo*/
+    @Column (name = "fecha_fin")
+    private Timestamp fechaFin;
     
     /*Columna que hace referencia a la fecha y hora final de atencion del motivo*/
-    @Column (name = "fecha_hora_fin")
-    private Timestamp fechaHoraFin;
+    @Column (name = "hora_inicio")
+    private String horaInicio;
+    
+    /*Columna que hace referencia a la fecha y hora final de atencion del motivo*/
+    @Column (name = "hora_fin")
+    private String horaFin;
 
     public Long getId() {
         return id;
@@ -56,20 +64,36 @@ public class ReasonSchedule implements Serializable {
         this.reason = reason;
     }
 
-    public Timestamp getFechaHoraInicio() {
-        return fechaHoraInicio;
+    public String getHoraInicio() {
+        return horaInicio;
     }
 
-    public void setFechaHoraInicio(Timestamp fechaHoraInicio) {
-        this.fechaHoraInicio = fechaHoraInicio;
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
     }
 
-    public Timestamp getFechaHoraFin() {
-        return fechaHoraFin;
+    public String getHoraFin() {
+        return horaFin;
     }
 
-    public void setFechaHoraFin(Timestamp fechaHoraFin) {
-        this.fechaHoraFin = fechaHoraFin;
+    public void setHoraFin(String horaFin) {
+        this.horaFin = horaFin;
+    }
+
+    public Timestamp getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Timestamp fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Timestamp getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Timestamp fechaFin) {
+        this.fechaFin = fechaFin;
     }
 
     @Override

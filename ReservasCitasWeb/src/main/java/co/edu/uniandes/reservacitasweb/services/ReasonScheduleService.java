@@ -21,7 +21,7 @@ import javax.ws.rs.PUT;
  *
  * @author Cindy
  */
-@Path("/reasonSchedule_schedule")
+@Path("/reason_schedule")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 @Stateless

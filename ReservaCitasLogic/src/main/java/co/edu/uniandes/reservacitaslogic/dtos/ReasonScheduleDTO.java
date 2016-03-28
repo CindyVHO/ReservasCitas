@@ -23,10 +23,14 @@ public class ReasonScheduleDTO implements Serializable {
     private ReasonDTO reason;
     
     /*Fecha y hora de inicio de atencion del motivo*/
-    private Date fechaHoraInicio;
+    private Date fechaInicio;
     
     /*Fecha y hora final de atencion del motivo*/
-    private Date fechaHoraFin;
+    private Date fechaFin;
+    
+    private String horaInicio;
+    
+    private String horaFin;
            
     /*Metodos GET y SET de los atributos del DTO*/
     
@@ -46,19 +50,37 @@ public class ReasonScheduleDTO implements Serializable {
         this.reason = reason;
     }
     
-    public Date getFechaHoraInicio() {
-        return fechaHoraInicio;
+    public Date getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFechaHoraInicio(Date fechaHoraInicio) {
-        this.fechaHoraInicio = fechaHoraInicio;
+    public void setFechaInicio(Date fechaHoraInicio) {
+        this.fechaInicio = fechaHoraInicio;
     }
 
-    public Date getFechaHoraFin() {
-        return fechaHoraFin;
+    public Date getFechaFin() {
+        return fechaFin;
     }
 
-    public void setFechaHoraFin(Date fechaHoraFin) {
-        this.fechaHoraFin = fechaHoraFin;
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
     }   
+
+    public String getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(String horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public String getHoraFin() {
+        return horaFin;
+    }
+
+    public void setHoraFin(String horaFin) {
+        this.horaFin = horaFin;
+    }
+    
+    
 }
