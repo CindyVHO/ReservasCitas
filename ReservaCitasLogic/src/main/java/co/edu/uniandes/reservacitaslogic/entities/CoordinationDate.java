@@ -6,16 +6,16 @@
 package co.edu.uniandes.reservacitaslogic.entities;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
-import javax.persistence.CascadeType;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * Tabla que contiene las Citas con Coordinacion
@@ -37,19 +37,20 @@ public class CoordinationDate implements Serializable {
     
     /** Columna que hace referencia la fecha de la cita */
     @Column(name = "fecha_cita")
-    private Timestamp fecha;
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
     
     /** Columna que hace referencia a la hora de inicio de la cita */
     @Column(name = "hora_inicio")
-    private Timestamp horaInicio;
+    private String horaInicio;
     
     /** Columna que hace referencia a la hora fin de la cita */
     @Column(name = "hora_fin")
-    private Timestamp horaFin;
+    private String horaFin;
     
     /** Columna que hace referencia al motivo de la cita */
     @OneToOne
-    private Contact motivo;
+    private Reason motivo;
     
     /** Columna que hace referencia al programa al que pertenece el estudiante */
     @Column(name = "programa")
@@ -80,30 +81,38 @@ public class CoordinationDate implements Serializable {
         this.estado = estado;
     }
 
-    public Timestamp getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(Timestamp fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public Timestamp getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Timestamp horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Timestamp getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Timestamp horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
 
+    public Reason getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(Reason motivo) {
+        this.motivo = motivo;
+    }
+    
     public String getPrograma() {
         return programa;
     }

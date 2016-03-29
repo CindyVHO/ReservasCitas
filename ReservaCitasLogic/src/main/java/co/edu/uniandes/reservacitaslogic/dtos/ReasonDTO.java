@@ -20,6 +20,8 @@ public class ReasonDTO implements Serializable {
     
     /* Nombre del motivo */
     private String nombre;
+    
+    private String color;
            
     /*Metodos GET y SET de los atributos del DTO*/
     
@@ -37,5 +39,15 @@ public class ReasonDTO implements Serializable {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }        
+    }     
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+    
 }

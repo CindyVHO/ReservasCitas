@@ -26,13 +26,13 @@ public class CoordinationDateDTO implements Serializable {
     private Date fecha;
     
     /* Hora de inicio de la cita */
-    private Date horaInicio;
+    private String horaInicio;
     
     /* Hora fin de la cita */
-    private Date horaFin;
+    private String horaFin;
     
     /* Motivo de la cita */
-    private ContactImportantDTO motivo;
+    private ReasonDTO motivo;
     
     /* Programa al que pertenece el estudiante */
     private String programa;
@@ -66,20 +66,28 @@ public class CoordinationDateDTO implements Serializable {
         this.fecha = fecha;
     }
 
-    public Date getHoraInicio() {
+    public String getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Date horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFin() {
+    public String getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Date horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
+    }
+
+    public ReasonDTO getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(ReasonDTO motivo) {
+        this.motivo = motivo;
     }
 
     public String getPrograma() {

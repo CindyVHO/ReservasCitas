@@ -2,6 +2,13 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="ReservaCitasPU" transaction-type="JTA">
     <jta-data-source>Sisinfo</jta-data-source>
+    <class>co.edu.uniandes.personalogic.entities.Country</class>
+    <class>co.edu.uniandes.personalogic.entities.DocumentType</class>
+    <class>co.edu.uniandes.personalogic.entities.Faculty</class>
+    <class>co.edu.uniandes.personalogic.entities.FormationLevel</class>
+    <class>co.edu.uniandes.personalogic.entities.Person</class>
+    <class>co.edu.uniandes.personalogic.entities.Program</class>
+    <class>co.edu.uniandes.personalogic.entities.Student</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.schema-generation.database.action" value="create"/>

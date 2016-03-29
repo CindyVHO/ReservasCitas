@@ -13,6 +13,7 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -36,7 +37,7 @@ public class Program implements Serializable{
     private String nombrePrograma;
 
     /*Columna que almacena la facultad a la que pertenece el programa*/
-    @Column (name = "id_facultad")
+    @JoinColumn (name = "id_facultad")
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     private Faculty facultad;
 

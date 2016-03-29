@@ -6,14 +6,17 @@
 package co.edu.uniandes.personalogic.entities;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  * Tabla que contiene los datos de la persona
@@ -39,7 +42,7 @@ public class Person implements Serializable {
     private String nombres;
     
     /*Columna que almacena el tipo de documento de la persona*/
-    @Column(name = "id_tipo_documento")
+    @JoinColumn(name = "id_tipo_documento")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private DocumentType tipoDocumento;
     
@@ -53,7 +56,8 @@ public class Person implements Serializable {
     
     /*Columna que almacena la fecha de nacimiento de la persona*/
     @Column(name = "fecha_nacimiento")
-    private Timestamp fechaNacimiento;
+    @Temporal(TemporalType.DATE)
+    private Date fechaNacimiento;
 
     /*Columna que almacena el correo de la persona*/
     @Column(name = "correo", unique = true)
@@ -76,7 +80,7 @@ public class Person implements Serializable {
     private String extension;
     
     /*Columna que almacena el pais de la persona*/
-    @Column(name = "id_pais")
+    @JoinColumn(name = "id_pais")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private Country pais;
 
@@ -148,11 +152,11 @@ public class Person implements Serializable {
         this.codigo = codigo;
     }
 
-    public Timestamp getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Timestamp fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

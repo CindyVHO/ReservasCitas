@@ -7,6 +7,7 @@ package co.edu.uniandes.reservacitaslogic.converters;
 
 import co.edu.uniandes.reservacitaslogic.dtos.CoordinationDateDTO;
 import co.edu.uniandes.reservacitaslogic.entities.CoordinationDate;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,10 +67,10 @@ public abstract class CoordinationDateConverter {
             CoordinationDate entity = new CoordinationDate();
             entity.setId(dto.getId());
             entity.setEstado(dto.getEstado());
-            entity.setFecha((Timestamp) dto.getFecha());
+            entity.setFecha((Date) dto.getFecha());
             entity.setComentarios(dto.getComentarios());
-            entity.setHoraFin((Timestamp) dto.getHoraFin());
-            entity.setHoraInicio((Timestamp) dto.getHoraInicio());
+            entity.setHoraFin(dto.getHoraFin());
+            entity.setHoraInicio(dto.getHoraInicio());
             entity.setPrograma(dto.getPrograma());
             return entity;
         } else {

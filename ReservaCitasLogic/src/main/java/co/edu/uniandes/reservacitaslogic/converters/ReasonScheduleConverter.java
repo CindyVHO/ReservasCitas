@@ -5,9 +5,9 @@
  */
 package co.edu.uniandes.reservacitaslogic.converters;
 
-import co.edu.uniandes.personalogic.converters.FormationLevelConverter;
 import co.edu.uniandes.reservacitaslogic.dtos.ReasonScheduleDTO;
 import co.edu.uniandes.reservacitaslogic.entities.ReasonSchedule;
+import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,8 +65,8 @@ public abstract class ReasonScheduleConverter {
             ReasonSchedule entity = new ReasonSchedule();
             entity.setId(dto.getId());
             entity.setReason(ReasonConverter.refDTO2Entity(dto.getReason()));
-            entity.setFechaInicio((Timestamp) dto.getFechaInicio());
-            entity.setFechaFin((Timestamp) dto.getFechaFin());
+            entity.setFechaInicio((Date) dto.getFechaInicio());
+            entity.setFechaFin((Date) dto.getFechaFin());
             entity.setHoraInicio(dto.getHoraInicio());
             entity.setHoraFin( dto.getHoraFin());
             return entity;

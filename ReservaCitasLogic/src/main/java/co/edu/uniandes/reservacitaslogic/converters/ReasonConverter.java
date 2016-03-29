@@ -24,6 +24,7 @@ public abstract class ReasonConverter {
             ReasonDTO dto = new ReasonDTO();            
             dto.setId(entity.getId());
             dto.setNombre(entity.getNombre());
+            dto.setColor(entity.getColor());
             return dto;
         } else {
             return null;
@@ -43,7 +44,9 @@ public abstract class ReasonConverter {
     private static ReasonDTO basicEntity2DTO(Reason entity) {
         if (entity != null) {
             ReasonDTO dto = new ReasonDTO();
+            dto.setId(entity.getId());
             dto.setNombre(entity.getNombre());
+            dto.setColor(entity.getColor());
             return dto;
         } else {
             return null;
@@ -55,6 +58,7 @@ public abstract class ReasonConverter {
             Reason entity = new Reason();
             entity.setId(dto.getId());
             entity.setNombre(dto.getNombre()); 
+            entity.setColor(dto.getColor());
             return entity;
         } else {
             return null;
@@ -62,6 +66,7 @@ public abstract class ReasonConverter {
     }
 
     public static List<ReasonDTO> listEntity2DTO(List<Reason> entities) {
+       
         List<ReasonDTO> dtos = new ArrayList<ReasonDTO>();
         if (entities != null) {
             for (Reason entity : entities) {

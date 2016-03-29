@@ -7,7 +7,7 @@ package co.edu.uniandes.personalogic.converters;
 
 import co.edu.uniandes.personalogic.dtos.PersonDTO;
 import co.edu.uniandes.personalogic.entities.Person;
-import java.sql.Timestamp;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,7 +94,7 @@ public abstract class PersonConverter {
             entity.setCorreoAlterno(dto.getCorreoAlterno());
             entity.setDireccionResidencia(dto.getDireccionResidencia());
             entity.setExtension(dto.getExtension());
-            entity.setFechaNacimiento((Timestamp) dto.getFechaNacimiento());
+            entity.setFechaNacimiento((Date) dto.getFechaNacimiento());
             entity.setNombres(dto.getNombres());
             entity.setNumDocumentoIdentidad(dto.getNumDocumentoIdentidad());
             entity.setPais(CountryConverter.refDTO2Entity(dto.getPais()));

@@ -41,11 +41,6 @@ public class ReasonLogic implements IReasonLogic {
     }
 
     @Override
-    public List<ReasonDTO> getReasonByName(String name) {
-        return ReasonConverter.listEntity2DTO(persistence.findByName(name));
-    }
-
-    @Override
     public ReasonDTO addReason(ReasonDTO dto) {
         Reason entity = ReasonConverter.basicDTO2Entity(dto);
         persistence.create(entity);

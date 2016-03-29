@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -45,19 +46,19 @@ public class Student implements Serializable {
     @Column(name = "telefono_emergencia")
     private String telefonoEmergencia;
     
-    @Column (name = "id_persona")
+    @JoinColumn (name = "id_persona")
     @OneToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private Person persona;
     
-    @Column (name = "id_programa")
+    @JoinColumn (name = "id_programa")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private Program programa;
     
-    @Column (name = "id_doble_programa")
+    @JoinColumn (name = "id_doble_programa")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private Program doblePrograma;
     
-    @Column (name = "id_nivel_formacion")
+    @JoinColumn (name = "id_nivel_formacion")
     @ManyToOne(fetch = javax.persistence.FetchType.LAZY, cascade = javax.persistence.CascadeType.MERGE)
     private FormationLevel tipoEstudiante;
     

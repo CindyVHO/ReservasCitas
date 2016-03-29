@@ -6,7 +6,6 @@
 package co.edu.uniandes.reservacitaslogic.entities;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,6 +31,9 @@ public class Reason implements Serializable {
     @Column(name = "nombre_motivo")
     private String nombre;
     
+    @Column(name = "color_motivo")
+    private String color;
+    
     /*Constructor de la clase*/
     public Reason() {    }
            
@@ -51,6 +53,15 @@ public class Reason implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
     
     /*Metodos Extra*/
 

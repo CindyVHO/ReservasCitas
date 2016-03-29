@@ -59,3 +59,4 @@ $RECYCLE.BIN/
 *.lnk
 /ReservaCitasLogic/target/
 /ReservasCitasWeb/target/
+/PersonaLogic/target/
